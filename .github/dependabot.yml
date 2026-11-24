@@ -1,18 +1,12 @@
 version: 2
 updates:
-  # homebrew-core tracks main, with a cooldown: expected to update, but never does
+  # homebrew-core tracks main, which gets over 100 pushes within the default
+  # cooldown, so every push is filtered out and it's never updated
   - package-ecosystem: nix
-    directory: /cooldown
+    directory: /busy-branch
     schedule:
       interval: daily
-    cooldown:
-      default-days: 2
-  # the same input without a cooldown, which updates
-  - package-ecosystem: nix
-    directory: /control
-    schedule:
-      interval: daily
-  # an input without a ref, aged by committer date
+  # disko has no ref, so it's aged by committer date rather than push time
   - package-ecosystem: nix
     directory: /no-ref
     schedule:
