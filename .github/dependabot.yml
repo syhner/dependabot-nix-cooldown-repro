@@ -1,0 +1,21 @@
+version: 2
+updates:
+  # homebrew-core tracks main, with a cooldown: expected to update, but never does
+  - package-ecosystem: nix
+    directory: /cooldown
+    schedule:
+      interval: daily
+    cooldown:
+      default-days: 2
+  # the same input without a cooldown, which updates
+  - package-ecosystem: nix
+    directory: /control
+    schedule:
+      interval: daily
+  # an input without a ref, aged by committer date
+  - package-ecosystem: nix
+    directory: /no-ref
+    schedule:
+      interval: daily
+    cooldown:
+      default-days: 2

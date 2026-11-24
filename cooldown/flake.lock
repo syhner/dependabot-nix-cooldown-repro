@@ -1,0 +1,28 @@
+{
+  "nodes": {
+    "homebrew-core": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794877077,
+        "narHash": "sha256-z0Zi+dpJxt6pJdyPMhJuyQlp1MO+/fBb3xpTgmOPKT0=",
+        "owner": "homebrew",
+        "repo": "homebrew-core",
+        "rev": "e09ef246f2e67c43019054525e9b1944112ff366",
+        "type": "github"
+      },
+      "original": {
+        "owner": "homebrew",
+        "ref": "main",
+        "repo": "homebrew-core",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "homebrew-core": "homebrew-core"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
